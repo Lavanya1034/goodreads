@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './styles.module.css'
-export default function Review() {
+export default function Review({setRevFlag}) {
   const reviews = [
     "Evocative Elegance",
     "Literary Resilience",
@@ -26,7 +26,7 @@ export default function Review() {
         <h3 style={{fontStyle:"italic"}}>What do you think?</h3>
         </div>
         <div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" onClick={()=>setRevFlag(true)} className="btn btn-primary">
             Write a new Review
           </button>
         </div>

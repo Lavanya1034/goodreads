@@ -2,9 +2,11 @@
 import AddNewReview from "../AddNewReview";
 import Review from "../Review";
 import styles from "./styles.module.css";
+import { useState } from "react";
 
 function BookDetail(props) {
   const { image, title, description, author } = props.data;
+  const [revFlag,setRevFlag]= useState(false)
   return (
     <div className="container">
       <div className="row">
@@ -18,9 +20,7 @@ function BookDetail(props) {
             <h1 className={styles.title}>{title}</h1>
             <h2 className={styles.author}>{author} </h2>
             <p>{description}</p>
-            <Review/>
-            
-            {/* <AddNewReview/> */}
+            {!revFlag?<Review setRevFlag={setRevFlag}/>:<AddNewReview setRevFlag={setRevFlag}/>}
           </div>
          
         </div>
