@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
 
-function AddNewReview() {
+function AddNewReview({setRevFlag}) {
   return (
     <div >
         
@@ -12,7 +12,7 @@ function AddNewReview() {
         <textarea className={`form-control ${styles.box}`} aria-label="With textarea"></textarea>
         </div>
         <div className='text-center'>
-        <button type="submit" className='btn-block btn-primary '>Submit</button>
+        <button type="submit" onClick={()=>setRevFlag(false)}    className='btn-block btn-primary '>Submit</button>
         </div>
     </div>
   )
