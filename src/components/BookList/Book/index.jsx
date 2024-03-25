@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 function Book(props) {
     const {title,image,id} = props.data
-    console.log(id)
   return (
     <div className='col-sm-3 p-2'>
         <div className="card">
