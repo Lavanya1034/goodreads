@@ -11,6 +11,7 @@ function BookDetailPage() {
     const book = useSelector(state=>state.book)
     const dispatch = useDispatch()
     const {id} = useParams()
+    console.log(id)
     useEffect(()=>{
         dispatch(addBooks(BOOK_DATA[id]))
         return()=>{
